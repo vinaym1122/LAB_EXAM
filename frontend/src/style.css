@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root {
+  font-family: "DM Sans", Arial, sans-serif;
+  color: #172033;
+  background: #f3f6fb;
+  font-synthesis: none;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, input { font: inherit; }
+.page { max-width: 1120px; margin: 0 auto; padding: 38px 24px 24px; }
+.hero {
+  border-radius: 22px; padding: 34px 38px; color: white;
+  background: linear-gradient(125deg, #172554, #2549a5 62%, #3974d8);
+  box-shadow: 0 15px 40px rgba(37, 73, 165, .18);
+}
+.badge {
+  display: inline-block; border: 1px solid rgba(255,255,255,.35);
+  background: rgba(255,255,255,.1); padding: 6px 10px; border-radius: 7px;
+  font-size: 11px; font-weight: 700; letter-spacing: 1.3px;
+}
+h1, h2 { font-family: "Manrope", Arial, sans-serif; }
+h1 { font-size: clamp(27px, 4vw, 39px); margin: 16px 0 8px; letter-spacing: -.8px; }
+.hero p { margin: 0; color: #dbe7ff; }
+.connection {
+  margin-top: 23px; display: inline-flex; align-items: center; gap: 9px;
+  padding: 9px 13px; background: rgba(255,255,255,.12); border-radius: 9px;
+  font-size: 13px;
+}
+.connection span { width: 8px; height: 8px; border-radius: 50%; background: #71f0b3; }
+.card {
+  margin-top: 22px; background: white; border: 1px solid #e3e9f3;
+  border-radius: 17px; padding: 27px; box-shadow: 0 8px 25px rgba(24, 39, 75, .045);
+}
+h2 { margin: 0; font-size: 21px; letter-spacing: -.35px; }
+.subtext { margin: 7px 0 20px; color: #788398; font-size: 13px; }
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+label { display: flex; flex-direction: column; gap: 8px; color: #34405a; font-size: 13px; font-weight: 700; }
+input {
+  width: 100%; padding: 12px 13px; border: 1px solid #dbe2ee; border-radius: 9px;
+  outline: none; color: #172033; background: #fbfcff; transition: border .15s, box-shadow .15s;
+}
+input:focus { border-color: #4776df; box-shadow: 0 0 0 3px rgba(71,118,223,.12); background: white; }
+input::placeholder { color: #a4adbd; font-weight: 400; }
+.actions { display: flex; gap: 10px; margin-top: 22px; flex-wrap: wrap; }
+button { border: 0; border-radius: 9px; padding: 11px 16px; cursor: pointer; font-weight: 700; font-size: 13px; }
+button:disabled { opacity: .65; cursor: wait; }
+.primary { color: white; background: #2855c5; box-shadow: 0 5px 12px rgba(40,85,197,.18); }
+.primary:hover { background: #1e45a7; }
+.secondary { background: #edf1f8; color: #3c4963; }
+.alert { margin: 0 0 17px; border-radius: 9px; padding: 11px 13px; font-size: 13px; }
+.success { color: #176c47; background: #e9f9f0; border: 1px solid #c7efd8; }
+.error { color: #a52d35; background: #fff0f0; border: 1px solid #ffd3d5; }
+.table-heading { display: flex; align-items: center; justify-content: space-between; gap: 15px; margin-bottom: 20px; }
+.table-heading .subtext { margin-bottom: 0; }
+.count { white-space: nowrap; padding: 7px 11px; background: #edf3ff; color: #2855c5; border-radius: 8px; font-size: 12px; font-weight: 700; }
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; text-align: left; font-size: 13px; }
+thead { background: #f5f7fb; color: #65718a; }
+th { padding: 13px 14px; font-size: 11px; text-transform: uppercase; letter-spacing: .5px; }
+td { padding: 15px 14px; border-bottom: 1px solid #edf0f5; color: #3d4860; }
+tbody tr:last-child td { border-bottom: 0; }
+tbody tr:hover { background: #fbfcff; }
+.student-id { display: inline-block; background: #edf3ff; color: #2855c5; padding: 5px 8px; border-radius: 6px; font-weight: 700; }
+.row-actions { white-space: nowrap; }
+.edit-btn { background: #eaf2ff; color: #2453b8; margin-right: 7px; padding: 8px 11px; }
+.delete-btn { background: #fff0f0; color: #bd3942; padding: 8px 11px; }
+.empty { padding: 34px 12px 28px; text-align: center; color: #7a8599; }
+.empty-icon { display: grid; place-items: center; margin: 0 auto 12px; width: 43px; height: 43px; border-radius: 13px; background: #edf3ff; color: #2855c5; font-size: 26px; }
+.empty strong { color: #35415a; }
+.empty p { margin: 7px 0 0; font-size: 13px; }
+footer { text-align: center; padding: 25px 0 8px; color: #929bad; font-size: 12px; }
+@media (max-width: 640px) {
+  .page { padding: 16px 12px; }
+  .hero { padding: 25px 21px; border-radius: 16px; }
+  .card { padding: 20px 16px; }
+  .form-grid { grid-template-columns: 1fr; }
+  .table-heading { align-items: flex-start; }
+}
